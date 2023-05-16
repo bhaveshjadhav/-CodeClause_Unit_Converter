@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Unit Converter</h1>
+    </header>
+
+    <main>
+      <div class="converter">
+        <h2>Converter</h2>
+        <form id="converter-form" action="#">
+          <div class="input-container">
+            <label for="from-unit">From Unit</label>
+            <select name="from-unit" id="from-unit">
+              <!-- Options for units -->
+              <option value="kilometers">Kilometers</option>
+          <option value="meters">Meters</option>
+          <option value="centimeters">Centimeters</option>
+          <option value="millimeters">Millimeters</option>
+          <option value="inches">Inches</option>
+          <option value="feet">Feet</option>
+          <option value="yards">Yards</option>
+          <option value="miles">Miles</option>
+              
+            </select>
+          </div>
+          <div class="input-container">
+            <label for="from-value">Value</label>
+            <input type="number" name="from-value" id="from-value" value="1" />
+          </div>
+          <div class="input-container">
+            <label for="to-unit">To Unit</label>
+            <select name="to-unit" id="to-unit">
+              <!-- Options for units -->
+              <option value="kilometers">Kilometers</option>
+          <option value="meters">Meters</option>
+          <option value="centimeters">Centimeters</option>
+          <option value="millimeters">Millimeters</option>
+          <option value="inches">Inches</option>
+          <option value="feet">Feet</option>
+          <option value="yards">Yards</option>
+          <option value="miles">Miles</option>
+            </select>
+          </div>
+          <button type="button" onclick="convert()">Convert</button>
+          <button type="button" onclick="swapUnits()">Swap Units</button>
+        </form>
+        <div id="result" class="result"></div>
+      </div>
+
+      <div class="history">
+        <h2>History</h2>
+        <ul id="history"></ul>
+      </div>
+
+      <div class="favorites">
+        <h2>Favorites</h2>
+        <ul id="favorites"></ul>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
